@@ -7,6 +7,7 @@ clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # this function tries to do C, hence 1 tuple as argument.
 clientSocket.connect(("www.google.com",80))
 
+# \r\n mean CR+LF which is windows new line
 clientSocket.sendall("GET / HTTP/1.0\r\n\r\n")
 
 # Loop to receive things:
